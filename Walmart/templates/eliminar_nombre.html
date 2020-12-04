@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static '/main.css'%}">
+
+
+    <title>Lista Productos</title>
+</head>
+
+<body>
+    <header header>
+
+        <div class="barra">
+            <h1>Walmart</h1>
+        </div>
+    </header>
+    <h1 class="encabezado"><i class="fas fa-user-times"></i>Eliminar Productos</h1>
+    <form method="POST" class="container-crud">
+        {% csrf_token %}
+        <h2>¿Desea eliminar del registro a {{nombres.nombre}} ?</h2>
+        <button class="botonE " type="submit">Eliminar</button>
+        <a href="{% url 'listar:listar' %}" class="botonE"> Cancelar </a>
+
+    </form>
+
+
+
+
+
+</body>
+
+</html>

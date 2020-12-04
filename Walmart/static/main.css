@@ -1,0 +1,105 @@
+
+.barra{
+    margin-top: 0;
+    height: 110px;
+    font-size: 40px;
+    background-color: #5d92f4;
+    text-align: center;
+}
+.barra h1{
+    color: #fff;
+    margin: 0 auto;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1200px;
+    height: 80%;
+    border-top:#87acf0 2px solid;
+    border-right: #87acf0 2px double;
+    border-bottom: #87acf0 2px solid;
+    border-left: #87acf0 2px solid;
+    border-radius: 10px; 
+}
+
+.container form{
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    width: 50%;
+    background-color: #e1e1e1;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+.botonE{
+    padding-bottom: 14px;
+    width: 190px;
+    background-color: white;
+    border: black 2px solid;
+    border-radius: 10px;
+}
+.botonE:hover {
+    background-color: #9fa5f5;
+    text-decoration: none;
+    color: white;
+}
+.boton-enviar{
+    font-size: 30px;
+    color:  #0c1931;
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+}
+
+.encabezado{
+    color: rgb(0, 113, 206);
+    font-size: 30px;
+    text-align: center;
+}
+.container-crud{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5rem;
+}
+.container-crud tr{
+    margin-top: 5rem;
+    color: black;
+    font-size: 1.5rem;
+}
+.container-crud th{
+    margin-top: 5rem;
+    color: black;
+    padding-right: 2rem;
+    
+}
+.container-crud a{
+    color: rgb(100, 0, 100);
+}
+.container-crud h1{
+    margin-top: 5rem;
+    color: black;
+    font-size: 2.5rem;
+}
+.container-crud i{
+    padding-right: 1rem;
+}
+.encabezado{
+    text-align: center;
+    color:black;
+    font-size: 3rem;
+}
+.encabezado i{
+    padding-right: 2rem;
+}

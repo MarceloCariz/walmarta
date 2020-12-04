@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="barra">
+            <h1>Walmart</h1>
+        </div>
+        <h1 class="encabezado"><i class="fas fa-list"></i>Lista Productos</h1>
+        {% csrf_token %}
+        {% if error %}
+        <h2>{{error}}</h2>
+        {% else %}
+        {% endif %}
+        {% if nombres %}
+        <table class="container-crud">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Codigo</th>
+                    <th>Grupo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Nombre in nombres %}
+                <tr>
+                    <td>{{Nombre.id}}</td>
+                    <td>{{Nombre.nombre}}</td>
+                    <td>{{Nombre.codigo}}</td>
+                    <td>{{Nombre.grupo}}</td>
+
+                    <td>
+                        <a href="{% url 'editar:editar_nombre' Nombre.id %}">Editar</a>
+                        <a href="{% url 'eliminar:eliminar_nombre' Nombre.id %}">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="container-crud">
+            <h1><i class="fas fa-frown-open"></i>No Existen Contactos registrados</h1>
+        </div>
+
+        {% endif %}
+    </header>
+</body>
+
+</html>
